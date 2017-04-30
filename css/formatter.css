@@ -1,0 +1,18 @@
+.back
+{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: white;
+    z-index: 9999;
+}
+
+.mdl-textfield
+{
+    width: 100%;
+}
+
+.mdl-textfield textarea
+{
+    font-family: "Roboto Mono";
+}

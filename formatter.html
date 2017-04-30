@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>D633 Mod Helper</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <!--
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    -->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    -->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!--
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    -->
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.png">
+    -->
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/formatter.css">
+</head>
+
+<body>
+
+    <div class="back mdl-cell--hide-tablet mdl-cell--hide-phone">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html" title="Go Back" role="button">
+            <i class="material-icons" role="presentation">arrow_back</i>
+        </a>
+    </div>
+
+    <div class="mdl-layout mdl-js-layout">
+
+        <main class="mdl-layout__content">
+            <div class="container mdl-grid">
+
+                <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+
+                <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <textarea  class="mdl-textfield__input" type="text" rows="35" id="html" readonly></textarea>
+                        <label class="mdl-textfield__label" for="html">HTML</label>
+                    </div>
+
+                    <button type="button" data-clipboard-target="#html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary">
+                        Copy to Clipboard
+                    </button>
+
+                    <pre id="code"></pre>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/formatter.js"></script>
+</body>
+
+</html>

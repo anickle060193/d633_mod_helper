@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>D633 Mod Helper</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <!--
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    -->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    -->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!--
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    -->
+
+    <!--
+    <link rel="shortcut icon" href="images/favicon.png">
+    -->
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+
+    <div class="mdl-layout mdl-js-layout">
+
+        <main class="mdl-layout__content">
+            <div class="container mdl-grid">
+
+                <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+
+                <div class="mdl-color--grey-50 mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
+                    <form action="/formatter.html" method="get">
+                        <center>
+                            <h2 class="mdl-typography--display-3">Delta Company 633 Mod Helper</h2>
+                        </center>
+
+                        <div class="mdl-grid">
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <h3>Nightfall</h3>
+                                <input type="hidden" id="nightfall_hash" name="nightfall_hash">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="nightfall_name" name="nightfall_name" required>
+                                    <label class="mdl-textfield__label" for="nightfall_name">Nightfall</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea  class="mdl-textfield__input" type="text" rows="6" id="nightfall_modifiers" name="nightfall_modifiers" required></textarea>
+                                    <label class="mdl-textfield__label" for="nightfall_modifiers">Nightfall Modifiers</label>
+                                </div>
+
+                                <h3>Strike Playlist</h3>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea  class="mdl-textfield__input" type="text" rows="6" id="strike_modifiers" name="strike_modifiers" required></textarea>
+                                    <label class="mdl-textfield__label" for="strike_modifiers">Strike Modifiers</label>
+                                </div>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <h3>Weekly Raid</h3>
+                                <input type="hidden" id="weekly_raid_hash" name="weekly_raid_hash">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="weekly_raid_name" name="weekly_raid_name" required>
+                                    <label class="mdl-textfield__label" for="weekly_raid_name">Weekly Raid</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea  class="mdl-textfield__input" type="text" rows="3" id="weekly_raid_challenge_modes" name="weekly_raid_challenge_modes" required></textarea>
+                                    <label class="mdl-textfield__label" for="weekly_raid_challenge_modes">Weekly Raid Challenge Modes</label>
+                                </div>
+
+                                <h3>Iron Banner</h3>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="iron_banner_game_mode" name="iron_banner_game_mode" required>
+                                    <label class="mdl-textfield__label" for="iron_banner_game_mode">Game Mode</label>
+                                </div>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <h3>Xur</h3>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="xur_location" name="xur_location" required>
+                                    <label class="mdl-textfield__label" for="xur_location">Location</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="xur_legacy_engram" name="xur_legacy_engram" required>
+                                    <label class="mdl-textfield__label" for="xur_legacy_engram">Legacy Engram</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="xur_warlock_armor" name="xur_warlock_armor" required>
+                                    <label class="mdl-textfield__label" for="xur_warlock_armor">Warlock Armor</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="xur_titan_armor" name="xur_titan_armor" required>
+                                    <label class="mdl-textfield__label" for="xur_titan_armor">Titan Armor</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="xur_hunter_armor" name="xur_hunter_armor" required>
+                                    <label class="mdl-textfield__label" for="xur_hunter_armor">Hunter Armor</label>
+                                </div>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="xur_weapon" name="xur_weapon" required>
+                                    <label class="mdl-textfield__label" for="xur_weapon">Weapon</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary">
+                            Get Homepage HTML
+                        </button>
+
+                    </form>
+
+                    <pre id="code"></pre>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/destiny.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

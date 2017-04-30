@@ -1,0 +1,62 @@
+body::before
+{
+    background-size: cover;
+    background-attachment: fixed;
+    content: '';
+    will-change: transform;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+    /* From https://i2.wp.com/planetdestiny.com/wp-content/uploads/2014/08/tower_pano.jpg */
+    background-image: url( '/assets/tower_pano.jpg' );
+    background-position: center;
+}
+
+body
+{
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+main
+{
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    margin-bottom: 40px;
+}
+
+header .mdl-layout__header-row
+{
+    padding-left: 40px;
+}
+
+.container
+{
+    max-width: 1600px;
+    width: calc( 100% - 16px );
+    margin: 0 auto;
+}
+
+.content
+{
+    border-radius: 2px;
+    padding: 40px 56px;
+}
+
+.mdl-layout.is-small-screen .content
+{
+    padding: 40px 28px;
+}
+
+.mdl-textfield
+{
+    display: block;
+}
+
+textarea
+{
+   resize: none;
+}
