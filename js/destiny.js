@@ -91,7 +91,7 @@ var ITEM_SUB_TYPE_NAMES = [
 function get( url )
 {
     return $.get( {
-        url: "https://www.bungie.net/platform/Destiny" + url,
+        url: "https://www.bungie.net/platform/Destiny" + url.replace( /\/?(\?|#|$)/, "/$1" ),
         headers: {
             "X-API-KEY": "9492f000be70437ab933484743bc1ad7"
         }
