@@ -3,71 +3,81 @@
     <img width="33%" src="https://68.media.tumblr.com/ab476d1d919c3b0f22e3c5a614f33091/tumblr_onjih7ts8q1tpip5go1_r1_400.gif"><img width="33%" src="https://media4.giphy.com/media/3o7qEccSvsVHNT17Xi/200.gif"><img width="33%" src="https://media3.giphy.com/media/rrCpR4Fh6vRHW/200.gif">
     <div style="margin-top:15px;">
         <p>
-            We play for fun, chase the loot, and to enjoy the games. We have a variety of skill levels from super elite to noob and all are welcome. Join a game and start having fun!
+            We play for fun, chase the loot, and enjoy the games. We have a variety of skill levels from super elite to noob and all are welcome. Join a game and start having fun!
         </p>
         <p>
-            Members can schedule sessions for any of the games listed to the right at this time.  If you wish to post a session for a different game, tag a mod in chat and request the game be added.
+            Members can schedule sessions for any of the games listed to the right at this time. If you wish to post a session for a different game, tag a mod in chat and request the game be added.
         </p>
     </div>
 </div>
 
-<center style="margin:40px 0;"><h4> Bungie Clan: <a href="https://www.bungie.net/en/Clan/Clan/885933">Link</a></h4></center>
+<center style="margin:30px 0 20px;"><h4> Bungie Clan: <a href="https://www.bungie.net/en/Clan/Clan/885933">Link</a></h4></center>
 
-<div class="row">
-    <div class="col-sm-4">
-        <center><h3><b>Nightfall</b></h3></center>
-        <img src="{{nightfall_img}}" style="width:100%;height:100%;">
-        <h4><center><u><b>{{nightfall_name}}</b></u></center></h4>
-        <i>Modifiers:</i> {{nightfall_modifiers}}
-    </div>
-    <div class="col-sm-4">
-        <center><h3><b>Strike Playlist</b></h3></center>
-        <img src="http://i.imgur.com/XRIuUzZ.jpg" style="width:100%;height:100%;">
-        <h4><center><u><b>SIVA Heroic Strikes</b></u></center></h4><i>Modifiers:</i> {{strike_modifiers}}
-    </div>
-    <div class="col-sm-4">
-        <center><h3><b>Weekly Raid</b></h3></center>
-        <img src="{{weekly_raid_img}}" style="width:100%;height:100%;">
-        <h4><center><b><u>{{weekly_raid_name}}</u></b></center></h4>
-        <i>Challenge Modes:</i>
-        {{#weekly_raid_challenge_modes}}
-        <br>
-        <a href="{{weekly_raid_challenge_mode_href}}">{{weekly_raid_challenge_mode_name}}</a>
-        {{/weekly_raid_challenge_modes}}
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <center><h3><b>Nightfall</b></h3></center>
+            <img src="{{nightfall_img}}" style="width:100%;height:100%;">
+            <h4><center><u><b>{{nightfall_name}}</b></u></center></h4>
+            <i>Modifiers:</i> {{nightfall_modifiers}}
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <center><h3><b>Strike Playlist</b></h3></center>
+            <img src="http://i.imgur.com/XRIuUzZ.jpg" style="width:100%;height:100%;">
+            <h4><center><u><b>SIVA Heroic Strikes</b></u></center></h4><i>Modifiers:</i> {{strike_modifiers}}
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <center><h3><b>Weekly Raid</b></h3></center>
+            <img src="{{weekly_raid_img}}" style="width:100%;height:100%;">
+            <h4><center><b><u>{{weekly_raid_name}}</u></b></center></h4>
+            <i>Challenge Modes:</i>
+            {{#weekly_raid_challenge_modes}}
+            <br>
+            <a href="{{weekly_raid_challenge_mode_href}}">{{weekly_raid_challenge_mode_name}}</a>
+            {{/weekly_raid_challenge_modes}}
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <center><h3><b>Xûr</b></h3>
+            </center><img src="https://i.imgur.com/11XTsph.jpg" style="width:100%;height:100%;">
+            <h4><center><b><u>Location: {{xur_location}}</u></b></center></h4>
+            <i>Legacy Engram:</i> {{xur_legacy_engram}}
+            <br>
+            <i>Warlock:</i> {{xur_warlock_armor}}
+            <br>
+            <i>Titan:</i> {{xur_titan_armor}}
+            <br>
+            <i>Hunter:</i> {{xur_hunter_armor}}
+            <br>
+            <i>Weapon:</i> {{xur_weapon}}
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <center><h3><b>The Tower</b></h3></center>
+            <img src="http://i.imgur.com/t8iUEkT.jpg" style="width:100%;height:100%;">
+            <h4><center><b><u>What's New this Week?</u></b></center></h4>
+            <a href="https://www.bungie.net/en/Activities/Detail?activity=armsday">Armsday Orders</a>
+            <br>
+            <a href="http://db.planetdestiny.com/vendors/view/1527174714">Daily Bounties</a>
+            <br>
+            <a href="http://db.planetdestiny.com/vendors/view/3746647075">Shaxx Bounties</a>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <center><h3><b>Iron Banner</b></h3></center>
+            <img src="http://i.imgur.com/SSOQsXo.jpg" style="width:100%;height:100%;">
+            <h4><center><b><u>Game Mode: {{iron_banner_game_mode}}</u></b></center></h4>
+            <a href="http://www.ironbanner.info">Progress Tracker</a>
+        </div>
+
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-4">
-        <center><h3><b>Xûr</b></h3>
-        </center><img src="https://i.imgur.com/11XTsph.jpg" style="width:100%;height:100%;">
-        <h4><center><b><u>Location: {{xur_location}}</u></b></center></h4>
-        <i>Legacy Engram:</i> {{xur_legacy_engram}}
-        <br>
-        <i>Warlock:</i> {{xur_warlock_armor}}
-        <br>
-        <i>Titan:</i> {{xur_titan_armor}}
-        <br>
-        <i>Hunter:</i> {{xur_hunter_armor}}
-        <br>
-        <i>Weapon:</i> {{xur_weapon}}
-    </div>
-
-    <div class="col-sm-4">
-       <center><h3><b>The Tower</b></h3></center>
-       <img src="http://i.imgur.com/t8iUEkT.jpg" style="width:100%;height:100%;">
-        <h4><center><b><u>What's New this Week?</u></b></center></h4>
-        <a href="https://www.bungie.net/en/Activities/Detail?activity=armsday">Armsday Orders</a>
-        <br>
-        <a href="http://db.planetdestiny.com/vendors/view/1527174714">Daily Bounties</a>
-        <br>
-        <a href="http://db.planetdestiny.com/vendors/view/3746647075">Shaxx Bounties</a>
-    </div>
-
-    <div class="col-sm-4">
-        <center><h3><b>Iron Banner</b></h3></center>
-        <img src="http://i.imgur.com/SSOQsXo.jpg" style="width:100%;height:100%;">
-        <h4><center><b><u>Game Mode: {{iron_banner_game_mode}}</u></b></center></h4>
-        <a href="http://www.ironbanner.info">Progress Tracker</a>
-    </div>
-</div>
+<hr class="hidden-sm hidden-md hidden-lg">
