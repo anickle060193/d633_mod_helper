@@ -40,7 +40,7 @@ var RAID_CHALLENGE_GUIDES = {
 function getNightfallImg( nightfallName )
 {
     nightfallName = nightfallName.toLowerCase();
-    for( let keyword in NIGHTFALL_IMG )
+    for( var keyword in NIGHTFALL_IMG )
     {
         if( nightfallName.includes( keyword ) )
         {
@@ -53,7 +53,7 @@ function getNightfallImg( nightfallName )
 function getWeeklyRaidChallengeModeHref()
 {
     challenge = this.toLowerCase();
-    for( let keyword in RAID_CHALLENGE_GUIDES )
+    for( var keyword in RAID_CHALLENGE_GUIDES )
     {
         if( challenge.includes( keyword ) )
         {
@@ -66,7 +66,7 @@ function getWeeklyRaidChallengeModeHref()
 function getWeeklyRaidChallengeModeName()
 {
     challenge = this.toLowerCase();
-    for( let keyword in RAID_CHALLENGE_GUIDES )
+    for( var keyword in RAID_CHALLENGE_GUIDES )
     {
         if( challenge.includes( keyword ) )
         {
@@ -79,7 +79,7 @@ function getWeeklyRaidChallengeModeName()
 function getRaidImg( raidName )
 {
     raidName = raidName.toLowerCase();
-    for( let keyword in RAID_IMG )
+    for( var keyword in RAID_IMG )
     {
         if( raidName.includes( keyword ) )
         {
