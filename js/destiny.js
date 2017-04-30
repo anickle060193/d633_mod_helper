@@ -203,7 +203,14 @@ function getXurData( callback )
 {
     get( "/Advisors/Xur" ).done( function( json )
     {
-        callback( json.Response.data );
+        if( json.ErrorCode == 1 && json.Response && json.Response.data )
+        {
+            callback( json.Response.data );
+        }
+        else
+        {
+            callback( null );
+        }
     } );
 }
 
