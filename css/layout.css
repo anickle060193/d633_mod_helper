@@ -11,7 +11,7 @@ body::before
     top: 0;
     position: fixed;
     /* From https://i2.wp.com/planetdestiny.com/wp-content/uploads/2014/08/tower_pano.jpg */
-    background-image: url( '/assets/tower_pano.jpg' );
+    background-image: url( '../assets/tower_pano.jpg' );
     background-position: center;
 }
 
