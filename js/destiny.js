@@ -95,17 +95,12 @@ function get( url )
         headers: {
             "X-API-KEY": "9492f000be70437ab933484743bc1ad7"
         }
-    } )
-    .fail( function( data )
-    {
-        console.error( "GET Failed:" );
-        console.error( data );
     } );
 }
 
 function getAdvisorData( callback )
 {
-    get( "/Advisors/V2" ).done( function( json )
+    get( "/Advisors/V2/" ).done( function( json )
     {
         callback( json.Response.data );
     } );
