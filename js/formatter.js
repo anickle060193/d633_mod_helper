@@ -1,28 +1,28 @@
 var NIGHTFALL_IMG = {
-    "devils": "http://i.imgur.com/GGPedzI.jpg",
-    "will of crota": "http://i.imgur.com/EErmCD3.jpg",
-    "s.a.b.e.r": "http://i.imgur.com/Vk5JUok.jpg",
-    "perfected": "http://i.imgur.com/dB5hCQx.jpg",
-    "wretched": "http://i.imgur.com/77eAfKH.jpg",
-    "summoning pits": "http://i.imgur.com/WptWSpN.jpg",
-    "shadow thief": "http://i.imgur.com/MPXttpO.jpg",
-    "blighted chalice": "http://i.imgur.com/oLvy95E.jpg",
-    "abomination": "http://i.imgur.com/QZMe8GB.jpg",
-    "nexus": "http://i.imgur.com/O2U9GJh.jpg",
-    "winter": "http://i.imgur.com/TpyTBxT.jpg",
-    "echo": "http://i.imgur.com/qeSg3Rv.jpg",
-    "cerberus": "http://i.imgur.com/p048Jqz.jpg",
-    "dust palace": "http://i.imgur.com/jqFEFxr.jpg",
-    "undying": "http://i.imgur.com/QrSTSGC.jpg",
-    "shield": "http://i.imgur.com/c2fr9SN.jpg",
-    "sunless": "http://i.imgur.com/r4BOTib.jpg"
+    "devils": "https://i.imgur.com/GGPedzI.jpg",
+    "will of crota": "https://i.imgur.com/EErmCD3.jpg",
+    "s.a.b.e.r": "https://i.imgur.com/Vk5JUok.jpg",
+    "perfected": "https://i.imgur.com/dB5hCQx.jpg",
+    "wretched": "https://i.imgur.com/77eAfKH.jpg",
+    "summoning pits": "https://i.imgur.com/WptWSpN.jpg",
+    "shadow thief": "https://i.imgur.com/MPXttpO.jpg",
+    "blighted chalice": "https://i.imgur.com/oLvy95E.jpg",
+    "abomination": "https://i.imgur.com/QZMe8GB.jpg",
+    "nexus": "https://i.imgur.com/O2U9GJh.jpg",
+    "winter": "https://i.imgur.com/TpyTBxT.jpg",
+    "echo": "https://i.imgur.com/qeSg3Rv.jpg",
+    "cerberus": "https://i.imgur.com/p048Jqz.jpg",
+    "dust palace": "https://i.imgur.com/jqFEFxr.jpg",
+    "undying": "https://i.imgur.com/QrSTSGC.jpg",
+    "shield": "https://i.imgur.com/c2fr9SN.jpg",
+    "sunless": "https://i.imgur.com/r4BOTib.jpg"
 };
 
 var RAID_IMG = {
-    "vault": "http://i.imgur.com/Omt2ujf.jpg",
-    "crota" :"http://i.imgur.com/DH6OWPO.jpg",
-    "king" : "http://i.imgur.com/tzGREPM.jpg",
-    "wrath": "http://i.imgur.com/bOy1aWH.jpg"
+    "vault": "https://i.imgur.com/Omt2ujf.jpg",
+    "crota" :"https://i.imgur.com/DH6OWPO.jpg",
+    "king" : "https://i.imgur.com/tzGREPM.jpg",
+    "wrath": "https://i.imgur.com/bOy1aWH.jpg"
 };
 
 var RAID_CHALLENGE_GUIDES = {
