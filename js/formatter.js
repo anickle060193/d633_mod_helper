@@ -91,18 +91,18 @@ $( function()
         return "";
     }
 
-    new Clipboard( "[data-clipboard-target]" );
+    D633.util.initializeClipboard();
 
-    var params = new URL( window.location ).searchParams;
+    var params = D633.util.getQueryParams();
 
     var view = {
         nightfall_name: params.get( "nightfall_name" ),
         nightfall_img: getNightfallImg( params.get( "nightfall_name" ) ) ,
-        nightfall_modifiers: params.get( "nightfall_modifiers" ).split( /[\n\r]+/ ).join( ", " ),
-        strike_modifiers: params.get( "strike_modifiers" ).split( /[\n\r]+/ ).join( ", " ),
+        nightfall_modifiers: D633.util.splitLines( params.get( "nightfall_modifiers" ) ).join( ", " ),
+        strike_modifiers: D633.util.splitLines( params.get( "strike_modifiers" ) ).join( ", " ),
         weekly_raid_name: params.get( "weekly_raid_name" ),
         weekly_raid_img: getRaidImg( params.get( "weekly_raid_name" ) ),
-        weekly_raid_challenge_modes: params.get( "weekly_raid_challenge_modes" ).split( /[\n\r]+/ ),
+        weekly_raid_challenge_modes: D633.util.splitLines( params.get( "weekly_raid_challenge_modes" ) ),
         weekly_raid_challenge_mode_href: getWeeklyRaidChallengeModeHref,
         weekly_raid_challenge_mode_name: getWeeklyRaidChallengeModeName,
         xur_location: params.get( "xur_location" ),
