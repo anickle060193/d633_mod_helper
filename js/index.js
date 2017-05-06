@@ -22,6 +22,11 @@ $( function()
             setValue( "weekly_raid_hash", weeklyRaidHash );
         } );
         setValue( "weekly_raid_challenge_modes", getWeeklyRaidChallenges( advisorData ).join( "\n" ) );
+
+        getTrialssMap( advisorData, function( trialsMap )
+        {
+            setValue( "trials_map", trialsMap );
+        } );
     } );
 
     getXurInfo( function( xurInfo )

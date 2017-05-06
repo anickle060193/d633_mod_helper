@@ -281,3 +281,15 @@ function getXurInfo( callback )
         } );
     } );
 }
+
+function getTrialssMap( advisorData, callback )
+{
+    if( advisorData.activities.trials.status.active )
+    {
+        callback( advisorData.activities.trials.display.flavor );
+    }
+    else
+    {
+        callback( "N/A" );
+    }
+}
