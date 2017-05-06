@@ -27,6 +27,11 @@ $( function()
         {
             setValue( "trials_map", trialsMap );
         } );
+
+        getIronBannerGameMode( advisorData, function( ironBannerGameMode )
+        {
+            setValue( "iron_banner_game_mode", ironBannerGameMode );
+        } );
     } );
 
     getXurInfo( function( xurInfo )
@@ -38,6 +43,4 @@ $( function()
         setValue( "xur_warlock_armor", xurInfo.Warlock );
         setValue( "xur_weapon", xurInfo.Weapon );
     } );
-
-    setValue( "iron_banner_game_mode", "N/A" );
 } );

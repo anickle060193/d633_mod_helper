@@ -293,3 +293,8 @@ function getTrialssMap( advisorData, callback )
         callback( "N/A" );
     }
 }
+
+function getIronBannerGameMode( advisorData, callback )
+{
+    callback( "N/A" );
+}
