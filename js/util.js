@@ -1,22 +1,34 @@
-function setValue( id, value )
+window.D633 || ( window.D633 = { } );
+
+window.D633.util = ( function()
 {
-    $( "#" + id ).val( value ).parents( ".mdl-js-textfield" ).each( function()
+    function setValue( id, value )
     {
-        if( this.MaterialTextfield )
+        $( "#" + id ).val( value ).parents( ".mdl-js-textfield" ).each( function()
         {
-            this.MaterialTextfield.checkDirty();
-            this.MaterialTextfield.checkValidity();
-        }
-    } );
-}
+            if( this.MaterialTextfield )
+            {
+                this.MaterialTextfield.checkDirty();
+                this.MaterialTextfield.checkValidity();
+            }
+        } );
+    }
 
-function flatten( arr )
-{
-    return [].concat.apply( [], arr );
-}
+    function flatten( arr )
+    {
+        return [].concat.apply( [], arr );
+    }
 
-function decodeHTML( input )
-{
-    var doc = new DOMParser().parseFromString( input, "text/html" );
-    return $( doc.documentElement ).find( "body" )[ 0 ].innerHTML;
-}
+    function decodeHTML( input )
+    {
+        var doc = new DOMParser().parseFromString( input, "text/html" );
+        return $( doc.documentElement ).find( "body" )[ 0 ].innerHTML;
+    }
+
+    return {
+        setValue: setValue,
+        flatten: flatten,
+        decodeHTML: decodeHTML
+    };
+} )();
+
