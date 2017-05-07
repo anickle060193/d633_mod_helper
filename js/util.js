@@ -2,16 +2,25 @@ window.D633 || ( window.D633 = { } );
 
 window.D633.util = ( function()
 {
+    function updateMaterialTextField()
+    {
+        if( this && this.MaterialTextfield )
+        {
+            this.MaterialTextfield.checkDirty();
+            this.MaterialTextfield.checkValidity();
+            this.MaterialTextfield.checkFocus();
+            this.MaterialTextfield.checkDisabled();
+        }
+    }
+
     function setValue( id, value )
     {
-        $( "#" + id ).val( value ).parents( ".mdl-js-textfield" ).each( function()
-        {
-            if( this.MaterialTextfield )
-            {
-                this.MaterialTextfield.checkDirty();
-                this.MaterialTextfield.checkValidity();
-            }
-        } );
+        $( "#" + id ).val( value ).parents( ".mdl-js-textfield" ).each( updateMaterialTextField );
+    }
+
+    function clearRequired( selector )
+    {
+        $( selector ).attr( "required", false ).parents( ".mdl-js-textfield" ).each( updateMaterialTextField );
     }
 
     function flatten( arr )
@@ -32,7 +41,12 @@ window.D633.util = ( function()
 
     function getQueryParams()
     {
-        return new URL( window.location ).searchParams
+        var params = { };
+        for( var kv of new URL( window.location ).searchParams )
+        {
+            params[ kv[ 0 ] ] = kv[ 1 ] ? kv[ 1 ].trim() : "";
+        }
+        return params;
     }
 
     function splitLines( s )
@@ -42,6 +56,7 @@ window.D633.util = ( function()
 
     return {
         setValue: setValue,
+        clearRequired: clearRequired,
         flatten: flatten,
         decodeHTML: decodeHTML,
         getQueryParams: getQueryParams,

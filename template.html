@@ -18,14 +18,14 @@
 
         <div class="col-md-4 col-sm-6 col-xs-12">
             <center><h3><b>Nightfall</b></h3></center>
-            <img src="{{nightfall_img}}" style="width:100%;height:100%;">
+            <img src="{{{nightfall_img}}}" style="width:100%;height:100%;">
             <h4><center><u><b>{{nightfall_name}}</b></u></center></h4>
             <i>Modifiers:</i> {{nightfall_modifiers}}
         </div>
 
         <div class="col-md-4 col-sm-6 col-xs-12">
             <center><h3><b>Strike Playlist</b></h3></center>
-            <img src="http://i.imgur.com/XRIuUzZ.jpg" style="width:100%;height:100%;">
+            <img src="https://i.imgur.com/XRIuUzZ.jpg" style="width:100%;height:100%;">
             <h4><center><u><b>SIVA Heroic Strikes</b></u></center></h4><i>Modifiers:</i> {{strike_modifiers}}
         </div>
 
@@ -33,12 +33,12 @@
 
         <div class="col-md-4 col-sm-6 col-xs-12">
             <center><h3><b>Weekly Raid</b></h3></center>
-            <img src="{{weekly_raid_img}}" style="width:100%;height:100%;">
+            <img src="{{{weekly_raid_img}}}" style="width:100%;height:100%;">
             <h4><center><b><u>{{weekly_raid_name}}</u></b></center></h4>
             <i>Challenge Modes:</i>
             {{#weekly_raid_challenge_modes}}
             <br>
-            <a href="{{weekly_raid_challenge_mode_href}}">{{weekly_raid_challenge_mode_name}}</a>
+            <a href="{{{weekly_raid_challenge_mode_href}}}">{{.}}</a>
             {{/weekly_raid_challenge_modes}}
         </div>
 
@@ -61,7 +61,7 @@
 
         <div class="col-md-4 col-sm-6 col-xs-12">
             <center><h3><b>The Tower</b></h3></center>
-            <img src="http://i.imgur.com/t8iUEkT.jpg" style="width:100%;height:100%;">
+            <img src="https://i.imgur.com/t8iUEkT.jpg" style="width:100%;height:100%;">
             <h4><center><b><u>What's New this Week?</u></b></center></h4>
             <a href="https://www.bungie.net/en/Activities/Detail?activity=armsday">Armsday Orders</a>
             <br>
@@ -71,10 +71,7 @@
         </div>
 
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <center><h3><b>Iron Banner</b></h3></center>
-            <img src="http://i.imgur.com/SSOQsXo.jpg" style="width:100%;height:100%;">
-            <h4><center><b><u>Game Mode: {{iron_banner_game_mode}}</u></b></center></h4>
-            <a href="http://www.ironbanner.info">Progress Tracker</a>
+            {{> crucible }}
         </div>
 
     </div>

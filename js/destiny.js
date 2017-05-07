@@ -144,21 +144,19 @@ window.D633.destiny = ( function()
         } );
     }
 
-    function getNightfallInfo( advisorData, callback )
+    function getNightfallName( advisorData, callback )
     {
-        var hash = advisorData.activities.nightfall.display.activityHash;
-        getActivityData( hash, function( nightfall )
+        getActivityData( advisorData.activities.nightfall.display.activityHash, function( nightfall )
         {
-            callback( nightfall.activityName, hash );
+            callback( nightfall.activityName );
         } );
     }
 
-    function getWeeklyRaidInfo( advisorData, callback )
+    function getWeeklyRaidName( advisorData, callback )
     {
-        var hash = advisorData.activities.weeklyfeaturedraid.display.activityHash;
-        getActivityData( hash, function( weeklyRaid )
+        getActivityData( advisorData.activities.weeklyfeaturedraid.display.activityHash, function( weeklyRaid )
         {
-            callback( weeklyRaid.activityName, hash );
+            callback( weeklyRaid.activityName );
         } );
     }
 
@@ -233,13 +231,7 @@ window.D633.destiny = ( function()
 
             if( !xurData )
             {
-                xd.Location = "N/A";
-                xd.Warlock = "N/A";
-                xd.Titan = "N/A";
-                xd.Hunter = "N/A";
-                xd.LegacyEngram = "N/A";
-                xd.Weapon = "N/A";
-                callback( xd );
+                callback( xd, false );
                 return;
             }
 
@@ -281,7 +273,7 @@ window.D633.destiny = ( function()
                             break;
                     }
                 } );
-                callback( xd );
+                callback( xd, true );
             } );
         } );
     }
@@ -290,28 +282,37 @@ window.D633.destiny = ( function()
     {
         if( advisorData.activities.trials.status.active )
         {
-            callback( advisorData.activities.trials.display.flavor );
+            callback( advisorData.activities.trials.display.flavor, true );
         }
         else
         {
-            callback( "N/A" );
+            callback( "", false );
         }
     }
 
     function getIronBannerGameMode( advisorData, callback )
     {
-        callback( "N/A" );
+        callback( "", false );
+    }
+
+    function getWeeklyCrucibleGameMode( advisorData, callback )
+    {
+        getActivityData( advisorData.activities.weeklycrucible.display.activityHash, function( activity )
+        {
+            callback( activity.activityName );
+        } )
     }
 
     return {
         getAdvisorData: getAdvisorData,
-        getNightfallInfo: getNightfallInfo,
+        getNightfallName: getNightfallName,
         getNightfallModifiers: getNightfallModifiers,
         getWeeklyStrikeModifiers: getWeeklyStrikeModifiers,
-        getWeeklyRaidInfo: getWeeklyRaidInfo,
+        getWeeklyRaidName: getWeeklyRaidName,
         getWeeklyRaidChallenges: getWeeklyRaidChallenges,
+        getXurInfo: getXurInfo,
+        getWeeklyCrucibleGameMode: getWeeklyCrucibleGameMode,
         getTrialssMap: getTrialssMap,
-        getIronBannerGameMode: getIronBannerGameMode,
-        getXurInfo: getXurInfo
+        getIronBannerGameMode: getIronBannerGameMode
     };
 } )();

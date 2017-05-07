@@ -56,14 +56,13 @@
                 <div class="mdl-color--grey-50 mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--10-col">
                     <form action="/formatter.html" method="get">
                         <center>
-                            <h2 class="mdl-typography--display-3">Delta Company 633 Mod Helper</h2>
+                            <h2 class="mdl-typography--display-2">Delta Company 633 Mod Helper</h2>
                         </center>
 
                         <div class="mdl-grid">
 
                             <div class="mdl-cell mdl-cell--4-col">
                                 <h3>Nightfall</h3>
-                                <input type="hidden" id="nightfall_hash" name="nightfall_hash">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="nightfall_name" name="nightfall_name" required>
                                     <label class="mdl-textfield__label" for="nightfall_name">Nightfall</label>
@@ -82,7 +81,6 @@
 
                             <div class="mdl-cell mdl-cell--4-col">
                                 <h3>Weekly Raid</h3>
-                                <input type="hidden" id="weekly_raid_hash" name="weekly_raid_hash">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="weekly_raid_name" name="weekly_raid_name" required>
                                     <label class="mdl-textfield__label" for="weekly_raid_name">Weekly Raid</label>
@@ -90,6 +88,12 @@
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <textarea  class="mdl-textfield__input" type="text" rows="3" id="weekly_raid_challenge_modes" name="weekly_raid_challenge_modes" required></textarea>
                                     <label class="mdl-textfield__label" for="weekly_raid_challenge_modes">Weekly Raid Challenge Modes</label>
+                                </div>
+
+                                <h3>Weekly Crucible</h3>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="weekly_crucible_game_mode" name="weekly_crucible_game_mode" required>
+                                    <label class="mdl-textfield__label" for="weekly_crucible_game_mode">Game Mode</label>
                                 </div>
 
                                 <h3>Trials</h3>
@@ -108,32 +112,32 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <h3>Xur</h3>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_location" name="xur_location" required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_location" name="xur_location" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_location">Location</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_legacy_engram" name="xur_legacy_engram" required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_legacy_engram" name="xur_legacy_engram" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_legacy_engram">Legacy Engram</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_warlock_armor" name="xur_warlock_armor" required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_warlock_armor" name="xur_warlock_armor" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_warlock_armor">Warlock Armor</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_titan_armor" name="xur_titan_armor" required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_titan_armor" name="xur_titan_armor" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_titan_armor">Titan Armor</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_hunter_armor" name="xur_hunter_armor" required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_hunter_armor" name="xur_hunter_armor" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_hunter_armor">Hunter Armor</label>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_weapon" name="xur_weapon" required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_weapon" name="xur_weapon" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_weapon">Weapon</label>
                                 </div>
                             </div>
