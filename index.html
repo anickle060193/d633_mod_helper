@@ -112,8 +112,17 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <h3>Xur</h3>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="xur_location" name="xur_location" data-xur-field required>
+                                    <input class="mdl-textfield__input" type="text" id="xur_location" name="xur_location" list="xur_locations" data-xur-field required>
                                     <label class="mdl-textfield__label" for="xur_location">Location</label>
+                                    <datalist id="xur_locations">
+                                        <option>Near Vanguard</option>
+                                        <option>Across from Shaxx</option>
+                                        <option>Hanger</option>
+                                        <option>Hanger Bar</option>
+                                        <option>Across from Speaker</option>
+                                        <option>Railing by Speaker</option>
+                                        <option>The Reef</option>
+                                    </datalist>
                                 </div>
 
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
