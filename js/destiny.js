@@ -292,7 +292,17 @@ window.D633.destiny = ( function()
 
     function getIronBannerGameMode( advisorData, callback )
     {
-        callback( "", false );
+        if( advisorData.activities.ironbanner.status.active )
+        {
+            getActivityData( advisorData.activities.ironbanner.display.activityHash, function( activity )
+            {
+                callback( activity.activityName.replace( /Iron Banner /, "" ), true );
+            } )
+        }
+        else
+        {
+            callback( "", false );
+        }
     }
 
     function getWeeklyCrucibleGameMode( advisorData, callback )
