@@ -69,6 +69,11 @@ $( function()
                 D633.util.setValue( "xur_titan_armor", xurInfo.Titan );
                 D633.util.setValue( "xur_warlock_armor", xurInfo.Warlock );
                 D633.util.setValue( "xur_weapon", xurInfo.Weapon );
+
+                if( D633.util.isBot() )
+                {
+                    D633.util.setValue( 'xur_location', 'Unknown' );
+                }
             }
             else
             {
@@ -76,5 +81,11 @@ $( function()
             }
         } )
 
-    ] );
+    ] ).then( function()
+    {
+        if( D633.util.isBot() )
+        {
+            $( 'button[type="submit"]' ).click();
+        }
+    } );
 } );

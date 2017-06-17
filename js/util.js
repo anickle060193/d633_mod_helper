@@ -54,6 +54,11 @@ window.D633.util = ( function()
         return s.split( /[\n\r]+/ );
     }
 
+    function isBot()
+    {
+        return !!new URL( window.location ).searchParams.get( 'bot' );
+    }
+
     return {
         setValue: setValue,
         clearRequired: clearRequired,
@@ -61,7 +66,8 @@ window.D633.util = ( function()
         decodeHTML: decodeHTML,
         getQueryParams: getQueryParams,
         initializeClipboard: initializeClipboard,
-        splitLines: splitLines
+        splitLines: splitLines,
+        isBot: isBot
     };
 } )();
 
