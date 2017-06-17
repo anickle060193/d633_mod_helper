@@ -12,7 +12,7 @@
     "tasks": [
         {
             "taskName": "Python Server",
-            "args": [ "-m", "SimpleHTTPServer" ]
+            "args": [ "-m", "SimpleHTTPServer", "8000" ]
         }
     ]
 }

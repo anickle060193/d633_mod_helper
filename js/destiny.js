@@ -102,32 +102,32 @@ window.D633.destiny = ( function()
         } );
     }
 
-    function getAdvisorData( callback )
+    function getAdvisorData()
     {
-        get( "/Advisors/V2/" ).done( function( json )
+        return get( "/Advisors/V2/" ).then( function( json )
         {
-            callback( json.Response.data );
+            return json.Response.data;
         } );
     }
 
-    function getManifestDataRequest( type, id, callback )
+    function getManifestDataRequest( type, id )
     {
         return get( "/Manifest/" + type + "/" + id );
     }
 
-    function getManifestData( type, id, callback )
+    function getManifestData( type, id )
     {
-        getManifestDataRequest( type, id ).done( function( json )
+        return getManifestDataRequest( type, id ).then( function( json )
         {
-            callback( json.Response.data );
+            return json.Response.data;
         } );
     }
 
-    function getActivityData( activityHash, callback )
+    function getActivityData( activityHash )
     {
-        getManifestData( "Activity", activityHash, function( data )
+        return getManifestData( "Activity", activityHash ).then( function( data )
         {
-            callback( data.activity );
+            return data.activity;
         } );
     }
 
@@ -136,27 +136,27 @@ window.D633.destiny = ( function()
         return getManifestDataRequest( "InventoryItem", itemHash )
     }
 
-    function getItemData( itemHash, callback )
+    function getItemData( itemHash )
     {
-        getManifestData( "InventoryItem", itemHash, function( data )
+        return getManifestData( "InventoryItem", itemHash ).then( function( data )
         {
-            callback( data.inventoryItem );
+            return data.inventoryItem;
         } );
     }
 
-    function getNightfallName( advisorData, callback )
+    function getNightfallName( advisorData )
     {
-        getActivityData( advisorData.activities.nightfall.display.activityHash, function( nightfall )
+        return getActivityData( advisorData.activities.nightfall.display.activityHash ).then( function( nightfall )
         {
-            callback( nightfall.activityName );
+            return nightfall.activityName;
         } );
     }
 
-    function getWeeklyRaidName( advisorData, callback )
+    function getWeeklyRaidName( advisorData )
     {
-        getActivityData( advisorData.activities.weeklyfeaturedraid.display.activityHash, function( weeklyRaid )
+        return getActivityData( advisorData.activities.weeklyfeaturedraid.display.activityHash ).then( function( weeklyRaid )
         {
-            callback( weeklyRaid.activityName );
+            return weeklyRaid.activityName;
         } );
     }
 
@@ -201,26 +201,27 @@ window.D633.destiny = ( function()
         return challenges;
     }
 
-    function getXurData( callback )
+    function getXurData()
     {
-        get( "/Advisors/Xur" ).done( function( json )
+        return get( "/Advisors/Xur" ).then( function( json )
         {
             if( json.ErrorCode == 1 && json.Response && json.Response.data )
             {
-                callback( json.Response.data );
+                return json.Response.data;
             }
             else
             {
-                callback( null );
+                return null;
             }
         } );
     }
 
-    function getXurInfo( callback )
+    function getXurInfo()
     {
-        getXurData( function( xurData )
+        return getXurData().then( function( xurData )
         {
             var xd = {
+                Active: false,
                 Location: null,
                 Warlock: null,
                 Titan: null,
@@ -231,15 +232,14 @@ window.D633.destiny = ( function()
 
             if( !xurData )
             {
-                callback( xd, false );
-                return;
+                return xd;
             }
 
             var requests = $.map( xurData.saleItemCategories[ 2 ].saleItems, function( saleItem )
             {
                 return getItemDataRequest( saleItem.item.itemHash );
             } );
-            $.when.apply( $, requests ).done( function()
+            return $.when.apply( $, requests ).then( function()
             {
                 var items =  $.map( arguments, function( arg )
                 {
@@ -273,44 +273,46 @@ window.D633.destiny = ( function()
                             break;
                     }
                 } );
-                callback( xd, true );
+
+                xd.Active = true;
+                return xd;
             } );
         } );
     }
 
-    function getTrialssMap( advisorData, callback )
+    function getTrialssMap( advisorData )
     {
         if( advisorData.activities.trials.status.active )
         {
-            callback( advisorData.activities.trials.display.flavor, true );
+            return Promise.resolve( advisorData.activities.trials.display.flavor );
         }
         else
         {
-            callback( "", false );
+            return Promise.resolve( null );
         }
     }
 
-    function getIronBannerGameMode( advisorData, callback )
+    function getIronBannerGameMode( advisorData )
     {
         if( advisorData.activities.ironbanner.status.active )
         {
-            getActivityData( advisorData.activities.ironbanner.display.activityHash, function( activity )
+            return getActivityData( advisorData.activities.ironbanner.display.activityHash ).then( function( activity )
             {
-                callback( activity.activityName.replace( /Iron Banner /, "" ), true );
-            } )
+                return activity.activityName.replace( /Iron Banner /, "" );
+            } );
         }
         else
         {
-            callback( "", false );
+            return Promise.resolve( null );
         }
     }
 
-    function getWeeklyCrucibleGameMode( advisorData, callback )
+    function getWeeklyCrucibleGameMode( advisorData )
     {
-        getActivityData( advisorData.activities.weeklycrucible.display.activityHash, function( activity )
+        return getActivityData( advisorData.activities.weeklycrucible.display.activityHash ).then( function( activity )
         {
-            callback( activity.activityName );
-        } )
+            return activity.activityName;
+        } );
     }
 
     return {
