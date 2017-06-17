@@ -70,7 +70,12 @@ $( function()
                 D633.util.setValue( "xur_warlock_armor", xurInfo.Warlock );
                 D633.util.setValue( "xur_weapon", xurInfo.Weapon );
 
-                if( D633.util.isBot() )
+                var xurLocation = D633.util.getQueryParam( 'xur' );
+                if( xurLocation )
+                {
+                    D633.util.setValue( 'xur_location', xurLocation );
+                }
+                else if( D633.util.isBot() )
                 {
                     D633.util.setValue( 'xur_location', 'Unknown' );
                 }

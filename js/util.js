@@ -54,9 +54,14 @@ window.D633.util = ( function()
         return s.split( /[\n\r]+/ );
     }
 
+    function getQueryParam( param )
+    {
+        return new URL( window.location ).searchParams.get( param );
+    }
+
     function isBot()
     {
-        return !!new URL( window.location ).searchParams.get( 'bot' );
+        return !!getQueryParam( 'bot' );
     }
 
     return {
@@ -67,6 +72,7 @@ window.D633.util = ( function()
         getQueryParams: getQueryParams,
         initializeClipboard: initializeClipboard,
         splitLines: splitLines,
+        getQueryParam: getQueryParam,
         isBot: isBot
     };
 } )();
